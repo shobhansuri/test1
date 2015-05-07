@@ -1,0 +1,10 @@
+<h1>Here are all tge articles that are oresent</h1>
+
+<ul id="articles">
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article_path(article.id) ,id:"#{article.id}"%>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "create new article", new_article_path %>
